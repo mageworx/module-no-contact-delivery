@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © MageWorx. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Sales\Api\OrderRepositoryInterface">
+        <plugin name="mageworx_nocontact_delivery_order_attribute" type="MageWorx\NoContactDelivery\Plugin\AddNoContactDeliveryToOrder"/>
+    </type>
+    <type name="Magento\Quote\Api\CartRepositoryInterface">
+        <plugin name="mageworx_nocontact_delivery_quote_attribute" type="MageWorx\NoContactDelivery\Plugin\AddNoContactDeliveryToQuote"/>
+    </type>
+    <type name="\Magento\Quote\Api\CartManagementInterface">
+        <plugin name="mageworx_nocontact_delivery_add_to_order" type="MageWorx\NoContactDelivery\Plugin\AddNoContactDeliveryToNewOrder"/>
+    </type>
+    <preference for="MageWorx\NoContactDelivery\Api\Data\NoContactDeliveryInterface" type="MageWorx\NoContactDelivery\Model\NoContactDelivery" />
+    <preference for="MageWorx\NoContactDelivery\Api\NoContactDeliveryRepositoryInterface" type="MageWorx\NoContactDelivery\Model\NoContactDeliveryRepository" />
+</config>

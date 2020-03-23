@@ -1,0 +1,48 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="MageWorx_NoContactDelivery::styles.css"/>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="MageWorx\NoContactDelivery\Block\NoContactDeliveryData" name="mageworx_checkout_no-Contact-delivery_data"
+                   after="-" cacheable="false" template="MageWorx_NoContactDelivery::data.phtml"/>
+        </referenceContainer>
+        <referenceBlock name="checkout.root">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="checkout" xsi:type="array">
+                            <item name="children" xsi:type="array">
+                                <item name="sidebar" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="summary" xsi:type="array">
+                                            <item name="children" xsi:type="array">
+                                                <item name="itemsBefore" xsi:type="array">
+                                                    <item name="component" xsi:type="string">uiComponent</item>
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="mageworx-nocontact-delivery" xsi:type="array">
+                                                            <item name="component" xsi:type="string">MageWorx_NoContactDelivery/js/view/single-checkbox</item>
+                                                            <item name="displayArea" xsi:type="string">shipping-information</item>
+                                                            <item name="template" xsi:type="string">MageWorx_NoContactDelivery/form/field</item>
+                                                            <item name="provider" xsi:type="string">checkoutProvider</item>
+                                                            <item name="dataScope" xsi:type="string">checkout.no_contact_delivery</item>
+                                                            <item name="sortOrder" xsi:type="string">3</item>
+                                                            <item name="config" xsi:type="array">
+                                                                <item name="customScope" xsi:type="string">checkout</item>
+                                                                <item name="prefer" xsi:type="string">toggle</item>
+                                                            </item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

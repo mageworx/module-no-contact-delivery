@@ -1,0 +1,134 @@
+input[name="no_contact_delivery"] {
+    display: none;
+}
+
+.mageworx-no-contact-delivery-block {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.mageworx-no-contact-delivery {
+    padding: 0 15px 5px 15px;
+    font-weight: 600;
+}
+
+.mageworx-no-contact-delivery-description {
+    padding: 0 15px 15px 15px;
+    color: #666666;
+}
+
+.admin__actions-switch {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle
+}
+
+.admin__field-control .admin__actions-switch {
+    line-height: 3.2rem;
+}
+
+.admin__actions-switch + .admin__field-service {
+    min-width: 34rem
+}
+
+._disabled .admin__actions-switch-checkbox + .admin__actions-switch-label, .admin__actions-switch-checkbox.disabled + .admin__actions-switch-label {
+    cursor: not-allowed;
+    opacity: .5;
+    pointer-events: none
+}
+
+.admin__actions-switch-checkbox:checked + .admin__actions-switch-label:before {
+    left: 15px
+}
+
+.admin__actions-switch-checkbox:checked + .admin__actions-switch-label:after {
+    background: #79a22e
+}
+
+.admin__actions-switch-checkbox:checked + .admin__actions-switch-label .admin__actions-switch-text:before {
+    content: attr(data-text-on)
+}
+
+.admin__actions-switch-checkbox:focus + .admin__actions-switch-label:after, .admin__actions-switch-checkbox:focus + .admin__actions-switch-label:before {
+    border-color: #007bdb
+}
+
+._error .admin__actions-switch-checkbox + .admin__actions-switch-label:after, ._error .admin__actions-switch-checkbox + .admin__actions-switch-label:before {
+    border-color: #e22626
+}
+
+.admin__actions-switch-label {
+    cursor: pointer;
+    display: inline-block;
+    height: 22px;
+    line-height: 22px;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+}
+
+.admin__actions-switch-label:after, .admin__actions-switch-label:before {
+    left: 0;
+    position: absolute;
+    right: auto;
+    top: 0
+}
+
+.admin__actions-switch-label:before {
+    background: #fff;
+    border: 1px solid #aaa6a0;
+    border-radius: 100%;
+    content: '';
+    display: block;
+    height: 22px;
+    transition: left .2s ease-in 0s;
+    width: 22px;
+    z-index: 1
+}
+
+.admin__actions-switch-label:after {
+    background: #e3e3e3;
+    border: 1px solid #aaa6a0;
+    border-radius: 12px;
+    content: '';
+    display: block;
+    height: 22px;
+    transition: background .2s ease-in 0s;
+    vertical-align: middle;
+    width: 37px;
+    z-index: 0
+}
+
+.admin__actions-switch-text:before {
+    content: attr(data-text-off);
+    padding-left: 47px;
+    white-space: nowrap
+}
+
+.admin__actions-switch-checkbox {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px
+}
+
+.admin__additional-info {
+    color: #666666;
+}
+
+.admin__field-label {
+    font-weight: 600;
+    display: inline-block;
+    width: 65%;
+    float: left;
+}
+
+.admin__field {
+    margin-bottom: 15px;
+}

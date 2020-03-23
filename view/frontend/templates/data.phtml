@@ -1,0 +1,10 @@
+<?php
+/**
+ * Copyright © MageWorx. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+?>
+<?php /**@var \MageWorx\NoContactDelivery\Block\NoContactDeliveryData $block */ ?>
+<script>
+    window.mageworxNoContactDevileryData = <?= \Zend_Json::encode($block->getNoContactDeliveryData()); ?>;
+</script>

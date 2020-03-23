@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © MageWorx. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <mageworx_nocontactdelivery>
+            <general>
+                <enabled>1</enabled>
+                <label>No-contact delivery</label>
+                <label_for_product>No-contact delivery available</label_for_product>
+            </general>
+        </mageworx_nocontactdelivery>
+    </default>
+</config>

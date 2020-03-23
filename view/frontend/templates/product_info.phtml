@@ -1,0 +1,23 @@
+<?php
+/**
+ * Copyright © MageWorx. All rights reserved.
+ * See LICENSE.txt for license details.
+ *
+ * @var $block MageWorx\NoContactDelivery\Block\Catalog\Product\NoContactDeliveryInfo
+ */
+$label       = $block->getLabelForProduct();
+$description = $block->getDescriptionForProduct(); ?>
+<?php if ($label || $description) : ?>
+    <div class="mageworx-no-contact-delivery-block">
+        <?php if ($label) : ?>
+            <div class="mageworx-no-contact-delivery">
+                <?= $block->escapeHtml($label) ?>
+            </div>
+        <?php endif; ?>
+        <?php if ($description) : ?>
+            <div class="mageworx-no-contact-delivery-description">
+                <?= $block->escapeHtml($description) ?>
+            </div>
+        <?php endif; ?>
+    </div>
+<?php endif; ?>

@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © MageWorx. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="mageworx" sortOrder="2001">
+            <label>MageWorx</label>
+        </tab>
+        <section id="mageworx_nocontactdelivery" translate="label" type="text" sortOrder="200" showInDefault="1"
+                 showInWebsite="1" showInStore="1">
+            <label>No-contact Delivery</label>
+            <tab>mageworx</tab>
+            <resource>MageWorx_NoContactDelivery::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label><![CDATA[Enable]]></label>
+                <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label><![CDATA[Enable]]></label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[This setting enables or disables the ‘no-contact delivery’ features on the front-end.]]></comment>
+                </field>
+                <field id="payment_methods" translate="label comment" type="multiselect" sortOrder="20" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label><![CDATA[Payment Methods]]></label>
+                    <comment><![CDATA[Choose the payment method(s) you want to assign the ‘no-contact delivery’ to. Leave empty to assign to all payment methods.]]></comment>
+                    <source_model>MageWorx\NoContactDelivery\Model\Source\PaymentMethods</source_model>
+                    <can_be_empty>1</can_be_empty>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="shipping_methods" translate="label comment" type="multiselect" sortOrder="30" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label><![CDATA[Shipping Methods]]></label>
+                    <comment><![CDATA[Choose the shipping method(s) you want to assign the ‘no-contact delivery’ to. Leave empty to assign to all shipping methods.]]></comment>
+                    <source_model>MageWorx\NoContactDelivery\Model\Source\ShippingMethods</source_model>
+                    <can_be_empty>1</can_be_empty>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="label" translate="label comment" type="text" sortOrder="40" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label><![CDATA["No-contact delivery" Label]]></label>
+                    <comment><![CDATA[This setting allows you to change the label for the ‘no-contact delivery’ option on the front-end.]]></comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="description" translate="label comment" type="textarea" sortOrder="50" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label><![CDATA["No-contact delivery" Description]]></label>
+                    <comment><![CDATA[This setting allows you to add a description, which will appear below the ‘No-contact delivery’ option on the front-end.]]></comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="label_for_product" translate="label comment" type="text" sortOrder="60" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label><![CDATA["No-contact delivery" Label On Product Page]]></label>
+                    <comment><![CDATA[This setting allows you to change the label for the ‘no-contact delivery’ option on the front-end.]]></comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="description_for_product" translate="label comment" type="textarea" sortOrder="70" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label><![CDATA[Message For "No-contact delivery" On Product Page]]></label>
+                    <comment><![CDATA[This setting allows you to add a description, which will appear on the product page.]]></comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
