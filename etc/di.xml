@@ -17,4 +17,11 @@
     </type>
     <preference for="MageWorx\NoContactDelivery\Api\Data\NoContactDeliveryInterface" type="MageWorx\NoContactDelivery\Model\NoContactDelivery" />
     <preference for="MageWorx\NoContactDelivery\Api\NoContactDeliveryRepositoryInterface" type="MageWorx\NoContactDelivery\Model\NoContactDeliveryRepository" />
+    <!-- Add default empty argument data to avoid magento bug "Missing required argument $data"-->
+    <type name="Magento\Ups\Model\Carrier">
+        <arguments>
+            <argument name="data" xsi:type="array">
+            </argument>
+        </arguments>
+    </type>
 </config>

@@ -26,10 +26,41 @@
                                                             <item name="template" xsi:type="string">MageWorx_NoContactDelivery/form/field</item>
                                                             <item name="provider" xsi:type="string">checkoutProvider</item>
                                                             <item name="dataScope" xsi:type="string">checkout.no_contact_delivery</item>
-                                                            <item name="sortOrder" xsi:type="string">3</item>
+                                                            <item name="sortOrder" xsi:type="string">1</item>
                                                             <item name="config" xsi:type="array">
                                                                 <item name="customScope" xsi:type="string">checkout</item>
                                                                 <item name="prefer" xsi:type="string">toggle</item>
+                                                            </item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                                <item name="steps" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="shipping-step" xsi:type="array">
+                                            <item name="children" xsi:type="array">
+                                                <item name="shippingAddress" xsi:type="array">
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="shippingAdditional" xsi:type="array">
+                                                            <item name="component" xsi:type="string">uiComponent</item>
+                                                            <item name="displayArea" xsi:type="string">shippingAdditional</item>
+                                                            <item name="children" xsi:type="array">
+                                                                <!-- address-list-additional-addresses -->
+                                                                <item name="mageworx-nocontact-delivery" xsi:type="array">
+                                                                    <item name="component" xsi:type="string">MageWorx_NoContactDelivery/js/view/single-checkbox</item>
+                                                                    <item name="displayArea" xsi:type="string">shipping-information</item>
+                                                                    <item name="template" xsi:type="string">MageWorx_NoContactDelivery/form/field</item>
+                                                                    <item name="provider" xsi:type="string">checkoutProvider</item>
+                                                                    <item name="dataScope" xsi:type="string">checkout.no_contact_delivery</item>
+                                                                    <item name="sortOrder" xsi:type="string">1</item>
+                                                                    <item name="config" xsi:type="array">
+                                                                        <item name="customScope" xsi:type="string">checkout</item>
+                                                                        <item name="prefer" xsi:type="string">toggle</item>
+                                                                    </item>
+                                                                </item>
                                                             </item>
                                                         </item>
                                                     </item>

@@ -120,6 +120,8 @@ input[name="no_contact_delivery"] {
 
 .admin__additional-info {
     color: #666666;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 .admin__field-label {
@@ -127,8 +129,10 @@ input[name="no_contact_delivery"] {
     display: inline-block;
     width: 65%;
     float: left;
+    margin-top: 8px;
 }
 
 .admin__field {
     margin-bottom: 15px;
+    max-width: 350px;
 }
