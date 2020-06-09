@@ -79,7 +79,7 @@ class AddNoContactDeliveryToQuote
      */
     public function afterGetList(
         CartRepositoryInterface $subject,
-        SearchCriteriaInterface $cartSearchResult
+        $cartSearchResult
     ) {
         /** @var CartInterface $entity */
         foreach ($cartSearchResult->getItems() as $cart) {

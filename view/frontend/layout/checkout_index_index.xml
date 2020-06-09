@@ -4,8 +4,12 @@
     </head>
     <body>
         <referenceContainer name="content">
-            <block class="MageWorx\NoContactDelivery\Block\NoContactDeliveryData" name="mageworx_checkout_no-Contact-delivery_data"
-                   after="-" cacheable="false" template="MageWorx_NoContactDelivery::data.phtml"/>
+            <block class="MageWorx\NoContactDelivery\Block\NoContactDeliveryData"
+                   name="mageworx_checkout_no-Contact-delivery_data"
+                   ifconfig="mageworx_nocontactdelivery/general/enabled"
+                   after="-"
+                   cacheable="false"
+                   template="MageWorx_NoContactDelivery::data.phtml"/>
         </referenceContainer>
         <referenceBlock name="checkout.root">
             <arguments>
